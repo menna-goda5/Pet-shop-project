@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
+}
+
+.main-container{
+    width:90%;
+    max-width:1200px;
+    min-height:700px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+.left{
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+}
+
+.left::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.15));
+}
+
+.text{
+    position:relative;
+    color:#fff;
+    text-align:center;
+    margin-bottom:60px;
+    padding:20px;
+}
+
+.text p{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.text h4{
+    font-size:50px;
+    font-weight:700;
+}
+
+.right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px;
+}
+
+form{
+    width:100%;
+}
+
+form input,
+form textarea{
+
+    width:100%;
+    padding:16px 18px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+    font-family:'Poppins',sans-serif;
+}
+
+form input:focus,
+form textarea:focus{
+
+    border-color:#ff8c42;
+    box-shadow:0 0 8px rgba(255,140,66,.25);
+}
+
+textarea{
+    resize:none;
+    height:150px;
+}
+
+input[type="submit"]{
+
+    background:#ff8c42;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+input[type="submit"]:hover{
+
+    background:#ff7420;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(255,140,66,.35);
+}
+
+@media(max-width:900px){
+
+.main-container{
+
+    grid-template-columns:1fr;
+}
+
+.left{
+
+    height:150px;
+}
+
+.right{
+
+    padding:35px;
+}
+
+.text h4{
+
+    font-size:40px;
+}
+
+}
